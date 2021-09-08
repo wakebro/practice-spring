@@ -12,5 +12,8 @@ public class InlineExamConsole implements ExamConsole {
 	public void print() {
 		System.out.printf("total is %d, avg is %f", exam.total(), exam.avg());
 	}
-
+	@Override
+	public void setExam(Exam exam) {
+		this.exam = exam;
+	}
 }
