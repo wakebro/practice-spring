@@ -1,5 +1,8 @@
 package spring.di;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import spring.di.entity.Exam;
 import spring.di.entity.WakeExam;
 import spring.di.ui.ExamConsole;
@@ -16,7 +19,10 @@ public class Program {
 		console.setExam(exam);
 		*/
 		
-		//console.print();
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring/di/setting.xml");
+		ExamConsole console = (ExamConsole) context.getBean("console");
+//		ExamConsole console = context.getBean(ExamConsole.class);
+		console.print();
 		
 	}
 }
