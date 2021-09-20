@@ -32,8 +32,8 @@ public class SimpleServer {
 			is = s1.getInputStream();
 			os = s1.getOutputStream();
 			
-			br_out = new BufferedReader(new InputStreamReader(System.in));
 			br_in = new BufferedReader(new InputStreamReader(is));
+			br_out = new BufferedReader(new InputStreamReader(System.in));
 			
 			bw = new BufferedWriter(new OutputStreamWriter(os));
 			pw = new PrintWriter(bw, true);
